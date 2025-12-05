@@ -6,9 +6,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.discover {
+.discover-section {
     width: 1920px;
     height: 800px;
+    border-radius: 0px 0px 50px 50px;
 
     background-image: url('/img/discover/AdobeStock_251238249\ 1.jpg');
 }
@@ -23,7 +24,7 @@ body {
     padding: 13.5px 0px;
 }
 
-nav ul {
+.header-nav ul {
     display: flex;
     justify-content: space-between;
     width: 730px;
@@ -46,27 +47,28 @@ nav ul {
     gap: 8px;
 }
 
-.user-img img {
+.user-profile__user-img img {
     border-radius: 100%;
 }
 
-.user-greetings {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.user-info {
+.user-profile__user-info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.user-name {
+.user-paragraph__user-greetings {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.user-paragraph__user-name {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
 }
 
-.active {
+.header-nav__item--active {
     color: #fff;
 }
 
