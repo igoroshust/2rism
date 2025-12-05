@@ -57,12 +57,12 @@ body {
     align-items: flex-end;
 }
 
-.user-paragraph__user-greetings {
+.user-profile__user-greetings {
     color: rgba(255, 255, 255, 0.5);
 }
 
 
-.user-paragraph__user-name {
+.user-profile__user-name {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
@@ -109,14 +109,10 @@ body {
 }
 
 .factoids {
-    margin-top: 140px;
+    margin: 140px 118px 100px;
 
     display: flex;
     align-items: center;
-
-    margin-bottom: 100px;
-    margin-left: 118px;
-    margin-right: 118px;
 
     width: 1140px;
     height: 88px;
@@ -127,7 +123,7 @@ body {
 }
 
 
-.factoid {
+.factoids__factoid {
     display: flex;
     align-items: center;
 
@@ -138,12 +134,12 @@ body {
     gap: 8px;
 }
 
-.factoid-1 {
+.factoids__factoid--location {
     width: 300px;
 }
 
-.factoid-text {
-    font-style: 16px;
+.factoids__factoid__text {
+    font-size: 16px;
     font-weight: 700;
     color: #161414;
 }
