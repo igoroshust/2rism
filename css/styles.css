@@ -10,8 +10,6 @@ body {
     width: 1920px;
     height: 800px;
 
-    border: 1px outset red;
-
     background-image: url('/img/discover/AdobeStock_251238249\ 1.jpg');
 }
 
@@ -19,20 +17,16 @@ body {
     padding: 30px 272px 100px 272px;
     width: auto;
     height: auto;
-
-    border: 1px solid gold;
 }
 
 .header {
     padding: 13.5px 0px;
-    border: 1px dotted greenyellow;
 }
 
 nav ul {
     display: flex;
     justify-content: space-between;
     width: 730px;
-    border: 3px solid red;
 
     padding-top: 5px;
 
@@ -78,8 +72,6 @@ nav ul {
 
 
 .content {
-    border: 3px dotted green;
-
     margin-top: 184px;
 }
 
@@ -112,4 +104,51 @@ nav ul {
 
 .btn-discover img {
     margin-right: 8px;
+}
+
+.factoids {
+    margin-top: 140px;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 100px;
+    margin-left: 118px;
+    margin-right: 118px;
+
+    width: 1140px;
+    height: 88px;
+    padding: 8px;
+
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+
+.factoid {
+    display: flex;
+    align-items: center;
+
+    width: 254px;
+    height: 72px;
+
+    padding: 16px 20px 16px 16px;
+    gap: 8px;
+}
+
+.factoid-1 {
+    width: 300px;
+}
+
+.factoid-text {
+    font-style: 16px;
+    font-weight: 700;
+    color: #161414;
+}
+
+.btn-search {
+    background-color: #7B61FF;
+    border-radius: 12px;
+    width: 60px;
+    height: 60px;
 }
