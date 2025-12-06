@@ -52,6 +52,55 @@
                 </div>
 
             </nav>
+
+            <div class="header__content">
+                <h1 class="header__title">
+                    Discover the most engaging places
+                </h1>
+                <button class="button button--huge" type="button">
+                    <img src="/img/icons/thematic/discover-btn-icon.svg" alt="">
+                    Discover on 3D Globe
+                </button>
+            </div>
+
+            <form action="" class="form">
+                <!-- location -->
+                <div class="form__input-wrapper form__input--location">
+                    <label for="location" class="form__label">Location</label>
+                    <input type="text" class="form__input" id="location" placeholder="Explore nearby destinations">
+                </div>
+                <!-- activity -->
+                <div class="form__input-wrapper form__input--activity">
+                    <label for="activity" class="form__label">Activity</label>
+                    <select name="" id="activity" class="form__select">
+                        <option value="all">All activities</option>
+                        <option value="culture">Culture</option>
+                        <option value="sport">Sport</option>
+                        <option value="extreme">Extreme</option>
+                    </select>
+                </div>
+                <!-- date -->
+                <div class="form__input-wrapper form__input--date">
+                    <label for="date" class="form__label">When</label>
+                    <input type="date" class="form__input" id="date" placeholder="Choose a Date">
+                </div>
+                <!-- guests -->
+                <div class="form__input-wrapper form__input--guests">
+                    <label for="guests" class="form__label">Guests</label>
+                    <select name="" id="guests" class="form__select">
+                        <option value="">1 guest</option>
+                        <option value="">2 guest</option>
+                        <option value="">3 guest</option>
+                        <option value="">4 guest or more</option>
+                    </select>
+                </div>
+
+                <button class="button button--search">
+                    <img src="/img/icons/thematic/search-btn-icon.png" alt="search">
+                </button>
+
+            </form>
+
         </div>
     </header>
 

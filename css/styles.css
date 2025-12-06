@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 /* @import url(https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600); Пример подключения через плагин google fonts */
 @import './reset.css';
+@import './buttons.css';
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -62,6 +63,8 @@ header a {
     column-gap: 54px;
     font-size: 14px;
     font-weight: 300;
+
+    text-transform: capitalize;
 }
 
 .nav-list__item {
@@ -73,4 +76,116 @@ header a {
 
 .nav-list__link--active {
     opacity: 1;
+}
+
+/* User */
+.user {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+.user__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.user__greeting {
+    opacity: 0.5;
+}
+.user__name {
+    font-weight: 600;
+}
+.user__avatar {
+    position: relative;
+}
+
+.user__avatar::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #FF0000;
+    border-radius: 50%;
+}
+
+.user__img {
+    border-radius: 50%; /* Круг */
+}
+
+/* Header content */
+.header__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    align-items: center;
+
+    text-align: center;
+}
+.header__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.3; /* 62 (line height) / 48 (font-size) = 1.3 */
+}
+
+/* Form */
+.form {
+    display: flex;
+    align-items: center;
+
+    width: 1140px;
+    height: 88px;
+    padding: 8px;
+
+    color: #000;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.form__input-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px 20px 16px 56px; /* 56 - большой паддинг и иконка на фоне */
+
+    background-repeat: no-repeat;
+    background-position: 16px 24px; /* 16px (отступ слева внутри wrapper), 24px (отступ сверху внутри wrapper) */
+}
+.form__input {
+    color: #161414;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.form__label {
+    font-style: 14px;
+    font-weight: 300;
+    color: #5b5b5b;
+}
+
+.form__input::placeholder {
+    color: #000;
+}
+
+.form__input--location {
+    width: 300px;
+    background-image: url('/img/icons/thematic/location-icon.png');
+}
+
+.form__input--activity {
+    width: 255px;
+    background-image: url('/img/icons/thematic/activity-icon.png');
+}
+
+.form__input--date {
+    width: 255px;
+    background-image: url('/img/icons/thematic/when-icon.png');
+}
+
+.form__input--guests {
+    width: 255px;
+    background-image: url('/img/icons/thematic/guests-icon.png');
 }
