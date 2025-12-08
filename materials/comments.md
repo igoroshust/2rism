@@ -1,11 +1,5 @@
 - background-repeat
 - object-fit
-- ::before, ::after
-- псевдоклассы (.form__input::placeholder для стилизации плейсхолдера)
-- select
-- text-transform
-- transition
-- will-change
 
 
 
@@ -39,8 +33,6 @@ assets/
 ```
 
 7. Верстку макетов проще делать по принципу "Desktop First", поскольку проще мыслить в парадигме "От большего – к меньшему".
-
-8. По умолчанию для элементов с `position: absolute` родителем является тег `html` (или любой отличный от static).
 
 **Контейнер**
 Для расчёта ширины контейнера при вёрстке первого раздела важно проанализировать разметку контейнера для всего макета.
@@ -78,80 +70,7 @@ assets/
 
 
 
-**transition**
-`transition: [свойство] [длительность] [функция времени] [задержка]`
 
-Пример:
-```css
-transition: background-color 0.2s ease-in
-
-/*
-    background-color - анимируемое свойство
-    0.2s - длительность перехода (0.2 секунды)
-    ease-in - функция времени (ускорение к концу)
-*/
-```
-- Фиксирует начальное значение цвета;
-- Фиксирует конечное значение цвета (которое задано в новом состоянии);
-- Рассчитывает промежуточные значения цвета;
-- Плавно анимирует переход между ними в течение 0.2 секунды по кривой `ease-in`.
-
-Пример с задержкой
-```css
-transition: background-color 0.2s ease-in 1.1s /* Переход начнётся через 1.1 секунду */
-```
-
-Конкретный пример
-```css
-.btn {
-    background-color: blue;
-    transition: background-color 0.2s ease-in 0.1s;
-}
-
-.btn:hover {
-    background-color: red; /* Плавный переход от синего к красному */
-}
-```
-
-Можно записать transition как отдельные свойства:
-```css
-transition-property: background-color;
-transition-duration: 0.2s;
-transition-timing-function: ease-in;
-transition-delay: 0s; /* По умолчанию */
-```
-
-~ Нюансы
-- Нельзя анимировать display, visibility, height/width в некоторых случаях
-- Избегать `transition: all` (это влияет на производительность)
-- Для сложной анимации использовать `will-change` (CSS-свойство, позволяющее предупредить браузер о предстоящих изменениях определённых свойств элемента. Это даёт движку браузера время на оптимизацию рендеринга - например, выделить отдельные слои, заранее подготовить GPU-ускорение и т.д.).
-
-
-**Атрибуты name, value в теге input**
-`name` - задание имени элемента input
-`value` - значение (то, что указано в атрибуте value).
-Пример кода на практике:
-```html
-<form action="/submit" method="POST">
-    <input type="text" name="username" value="Иван">
-    <input type="email" name="email" value="ivan@example.com">
-    <input type="checkbox" name="subscribe" value="yes" checked>
-    <input type="submit" value="Отправить">
-</form>
-```
-
-Данные, отправляемые на сервер, будут разнится в зависимости от выбранного метода передачи.
-Для `GET`
-```html
-/submit?username=Иван&email=ivan@example.com&subscribe=yes
-```
-
-Для `POST`
-```html
-username=Иван
-email=iven@example.com
-subscribe=yes
-```
 
 
 
@@ -159,6 +78,9 @@ subscribe=yes
 ### Структура разделов 
 **discover**
 ![alt text](discover-blocks.png)
+
+**Popular**
+- Стоит ли использовать article?
 
 
 
@@ -204,3 +126,15 @@ subscribe=yes
 ## Вопросы на проработку
 - Когда лучше использовать SVG, когда - PNG и в чём отличие?
 - Как рекомендуется размещать иконки - все в отдельной папке или создавать отдельную секцию внутри каждого блока?
+
+
+### Соответствие размера шрифта значениям font-size
+- 100 - Thin / Hairline
+- 200 - Extra Light / Ultra Light
+- 300 - Light
+- 400 - Normal / Regular
+- 500 - Medium
+- 600 - Semi Bold / Demi Bold
+- 700 - Bold
+- 800 - Extra Bold / Ultra Bold
+- 900 - Black / Heavy

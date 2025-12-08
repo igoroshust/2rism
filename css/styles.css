@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 /* @import url(https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600); Пример подключения через плагин google fonts */
 @import './reset.css';
-@import './buttons.css';
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -63,8 +62,6 @@ header a {
     column-gap: 54px;
     font-size: 14px;
     font-weight: 300;
-
-    text-transform: capitalize;
 }
 
 .nav-list__item {
@@ -188,4 +185,50 @@ header a {
 .form__input--guests {
     width: 255px;
     background-image: url('/img/icons/thematic/guests-icon.png');
+}
+
+
+/* ================================= main ================================= */
+
+main>section {
+    margin-top: 120px;
+}
+
+/* Popular Destinations */
+
+.section__heading {
+    font-size: 32px;
+    font-weight: 600;
+
+    color: #161414;
+}
+
+.section__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 203px);
+    justify-content: space-between;
+    
+    column-gap: 32px;
+}
+
+.section__item {
+    margin-top: 64px;
+    width: 203px;
+}
+
+.section__img {
+    border-radius: 12px;
+}
+
+.section__title {
+    margin-top: 8px;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: #161414;
+}
+
+.section__description {
+    font-style: 13px;
+    color: #979797;
 }
