@@ -9,94 +9,143 @@
 </head>
 <body>
     
-    <main class="main">
-        <section class="discover-section">
-            <div class="container">
-                <header class="header">
-                    <div class="header-wrapper">
+    <header class="header none">
+        <div class="container">
+            <nav class="nav">
+                <a href="#!" class="logo">
+                    <img src="/img/icons/ui/logo-header.svg" alt="2rism logo">
+                </a>
 
-                        <div class="logo">
-                            <img src="/img/icons/ui/logo-header.svg" alt="2rism logo">
-                        </div>
+                <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a href="#!" class="nav-list__link nav-list__link--active">home</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#!" class="nav-list__link">hotels</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#!" class="nav-list__link">restaurants</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#!" class="nav-list__link">tours</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#!" class="nav-list__link">destinations</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#!" class="nav-list__link">activities</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#!" class="nav-list__link">contact</a>
+                    </li>
+                </ul>
 
-                        <nav class="header-nav">
-                            <ul>
-                                <li class="header-nav__item header-nav__item--active">Home</li>
-                                <li class="header-nav__item">Hotels</li>
-                                <li class="header-nav__item">Restaurants</li>
-                                <li class="header-nav__item">Tours</li>
-                                <li class="header-nav__item">Destinations</li>
-                                <li class="header-nav__item">Activities</li>
-                                <li class="header-nav__item">Contact</li>
-                            </ul>
-                        </nav>
-
-                        <div class="user-profile">
-                            <div class="user-profile__user-img">
-                                <img src="/img/discover/user-pic.jpg" alt="">
-                            </div>
-
-                            <div class="user-profile__user-info">
-                                <p class="user-profile__user-greetings">Holla,</p>
-                                <p class="user-profile__user-name">Ales Nesetril</p>
-                            </div>
-                        </div>
+                <div class="user">
+                    <div class="user__content">
+                        <span class="user__greeting">Holla, </span>
+                        <span class="user__name">Ales Nestreil</span>
                     </div>
-                </header>
 
-                <div class="content">
-                    <div class="content-wrapper">
-                        <div class="content-info">
-                            <p><strong>Discover the most engaging places</strong></p>
-                        </div>
-                        <button type="button" class="btn btn-discover" aria-label="Discover on 3D Globe">
-                            <img src="/img/icons/ui/discover-btn-icon.svg">
-                            Discover on 3D Globe
-                        </button>
+                    <div class="user__avatar">
+                        <img class="user__img" src="/img/discover/user-pic.jpg" alt="Avatar">
                     </div>
                 </div>
 
-                <div class="factoids">
-                        <div class="factoids__factoid factoids__factoid--location">
-                            <div class="factoids__factoid__img">
-                                <img src="/img/icons/thematic/location-icon.png" alt="Location icon">
-                            </div>
-                            <div class="factoids__factoid__content">
-                                <p class="factoids__factoid__header">Location</p>
-                                <p class="factoids__factoid__text">Explore nearby destinations</p>
-                            </div>
-                        </div>
-                        <div class="factoids__factoid factoids__factoid--activity">
-                            <div class="factiods__factoid__img">
-                                <img src="/img/icons/thematic/activity-icon.png" alt="Activity icon">
-                            </div>
-                            <div class="factoids__factoid__content">
-                                <p class="factoids__factoid__header">Activity</p>
-                                <p class="factoids__factoid__text">All Activities</p>
-                            </div>
-                        </div>
-                        <div class="factoids__factoid factoids__factoid--when">
-                            <div class="factoids__factoid__img">
-                                <img src="/img/icons/thematic/when-icon.png" alt="When icon">
-                            </div>
-                            <div class="factoids__factoid__content">
-                                <p class="factoids__factoid__header">When</p>
-                                <p class="factoids__factoid__text">Choose a Date</p>
-                            </div>
-                        </div>
-                        <div class="factoids__factoid factoids__factoid--guest">
-                            <div class="factoids__factoid__img">
-                                <img src="/img/icons/thematic/guests-icon.png" alt="Guest icon">
-                            </div>
-                            <div class="factoids__factoid__content">
-                                <p class="factoids__factoid__header">Guests</p>
-                                <p class="factoids__factoid__text">1 guest</p>
-                            </div>
-                        </div>
+            </nav>
 
-                        <button type="button" class="btn btn-search" aria-label="Search">
-                            <img src="/img/icons/thematic/search-btn-icon.png">
-                        </button>
+            <div class="header__content">
+                <h1 class="header__title">
+                    Discover the most engaging places
+                </h1>
+                <button class="button button--huge" type="button">
+                    <img src="/img/icons/thematic/discover-btn-icon.svg" alt="">
+                    Discover on 3D Globe
+                </button>
+            </div>
+
+            <form action="" class="form">
+                <!-- location -->
+                <div class="form__input-wrapper form__input--location">
+                    <label for="location" class="form__label">Location</label>
+                    <input type="text" class="form__input" id="location" placeholder="Explore nearby destinations">
+                </div>
+                <!-- activity -->
+                <div class="form__input-wrapper form__input--activity">
+                    <label for="activity" class="form__label">Activity</label>
+                    <select name="" id="activity" class="form__select">
+                        <option value="all">All activities</option>
+                        <option value="culture">Culture</option>
+                        <option value="sport">Sport</option>
+                        <option value="extreme">Extreme</option>
+                    </select>
+                </div>
+                <!-- date -->
+                <div class="form__input-wrapper form__input--date">
+                    <label for="date" class="form__label">When</label>
+                    <input type="date" class="form__input" id="date" placeholder="Choose a Date">
+                </div>
+                <!-- guests -->
+                <div class="form__input-wrapper form__input--guests">
+                    <label for="guests" class="form__label">Guests</label>
+                    <select name="" id="guests" class="form__select">
+                        <option value="">1 guest</option>
+                        <option value="">2 guest</option>
+                        <option value="">3 guest</option>
+                        <option value="">4 guest or more</option>
+                    </select>
+                </div>
+
+                <button class="button button--search">
+                    <img src="/img/icons/thematic/search-btn-icon.png" alt="search">
+                </button>
+
+            </form>
+
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Popular Destinations -->
+        <section class="section section--popular">
+            <div class="container">
+                <h3 class="section__heading">Popular Destinations</h3>
+                <div class="section__wrapper">
+                    <!-- 1 item-->
+                        <div class="section__item">
+                            <img src="/img/popular/img.jpg" alt="big sur" class="section__img">
+                            <p class="section__title">Big Sur</p>
+                            <p class="section__description">California, USA</p>
+                        </div>
+                    <!-- 2 item-->
+                        <div class="section__item">
+                            <img src="/img/popular/img-1.jpg" alt="prescott" class="section__img">
+                            <p class="section__title">Prescott</p>
+                            <p class="section__description">Arizona, USA</p>
+                        </div>
+                    <!-- 3 item-->
+                        <div class="section__item">
+                            <img src="/img/popular/img-2.jpg" alt="fort mayers" class="section__img">
+                            <p class="section__title">Fort Mayers</p>
+                            <p class="section__description">Florida, USA</p>
+                        </div>
+                    <!-- 4 item-->
+                        <div class="section__item">
+                            <img src="/img/popular/img-3.jpg" alt="tucson" class="section__img">
+                            <p class="section__title">Tucson</p>
+                            <p class="section__description">Arizona, USA</p>
+                        </div>
+                    <!-- 5 item-->
+                        <div class="section__item">
+                            <img src="/img/popular/img-4.jpg" alt="saint joseph" class="section__img">
+                            <p class="section__title">St. Joseph</p>
+                            <p class="section__description">Michigan, USA</p>
+                        </div>
+                    <!-- 6 item-->
+                        <div class="section__item">
+                            <img src="/img/popular/img-5.jpg" alt="madrid" class="section__img">
+                            <p class="section__title">Madrid</p>
+                            <p class="section__description">Spain</p>
+                        </div>
                 </div>
             </div>
         </section>

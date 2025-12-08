@@ -6,111 +6,130 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.discover-section {
-    width: 1920px;
-    height: 800px;
-    border-radius: 0px 0px 50px 50px;
+.none {
+    display: none !important;
+}
 
+/* ================================= discover section ================================= */
+
+.header {
+    padding: 31px 0 100px; /* Сверху, слева-справа, снизу */
+    height: 800px; /* height вместо min-height, чтобы элементы контейнера растянулись по шапке */
+    color: #fff;
+
+    background-color: black; /* Задаём фон даже при наличии картинки, на случай, если она не подгрузится */
     background-image: url('/img/discover/AdobeStock_251238249\ 1.jpg');
+    background-size: cover; /* Изображение полностью покрывает контейнер с сохранением пропорций */
+    background-position: center; /* Центрирование фонового изображения внутри контейнера */
+    background-repeat: no-repeat; /* Изображение не дублируется */
+
+    border-radius: 0px 0px 54px 54px;
+}
+
+header a {
+    color: #fff;
 }
 
 .container {
-    padding: 30px 272px 100px 272px;
-    width: auto;
-    height: auto;
+    max-width: 1440px; /* Исходная ширина: 1376, + 32 + 32 = 1440px */
+    padding: 0 32px; /* Отступы слева и справа внутри контейнера (image-2 в materials) */
+    margin: 0 auto; /* Выстраивание контейнера по центру */
 }
 
-.header {
-    padding: 13.5px 0px;
+.container--header {
+    height: 100%; /* Растяжение контейнера по всей шапке */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.header-nav ul {
+/* nav */
+.nav {
     display: flex;
     justify-content: space-between;
-    width: 730px;
+    align-items: center;
 
-    padding-top: 5px;
+    column-gap: 30px;
+}
 
-    font-style: 14px;
+.logo {
+    flex-shrink: 0; /* Логотип не уменьшается */
+}
+
+/* nav-list */
+.nav-list {
+    display: flex;
+    column-gap: 54px;
+    font-size: 14px;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.7);
 }
 
-.header-wrapper {
+.nav-list__item {
+    
+}
+.nav-list__link {
+    opacity: 0.7;
+}
+
+.nav-list__link--active {
+    opacity: 1;
+}
+
+/* User */
+.user {
     display: flex;
-    justify-content: space-between;
+    column-gap: 8px;
+    align-items: center;
 }
-
-.user-profile {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 8px;
-}
-
-.user-profile__user-img img {
-    border-radius: 100%;
-}
-
-.user-profile__user-info {
+.user__content {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-
-.user-profile__user-greetings {
-    color: rgba(255, 255, 255, 0.5);
+.user__greeting {
+    opacity: 0.5;
+}
+.user__name {
+    font-weight: 600;
+}
+.user__avatar {
+    position: relative;
 }
 
+.user__avatar::after {
+    position: absolute;
+    right: 0;
+    top: 0;
 
-.user-profile__user-name {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #FF0000;
+    border-radius: 50%;
 }
 
-.header-nav__item--active {
-    color: #fff;
+.user__img {
+    border-radius: 50%; /* Круг */
 }
 
-
-.content {
-    margin-top: 184px;
-}
-
-.content-wrapper {
+/* Header content */
+.header__content {
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
+    row-gap: 32px;
     align-items: center;
-    gap: 32px;
+
+    text-align: center;
 }
-
-.content-info p {
-    color: #fff;
-    line-height: 62px;
-
+.header__title {
+    font-weight: 600;
     font-size: 48px;
-    font-weight: 500;
+    line-height: 1.3; /* 62 (line height) / 48 (font-size) = 1.3 */
 }
 
-.btn-discover {
-    width: 273px;
-    height: 72px;
-    background-color: #7B61FF;
-    border-radius: 12px;
-
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-    color: #fff;
-}
-
-.btn-discover img {
-    margin-right: 8px;
-}
-
-.factoids {
-    margin: 140px 118px 100px;
-
+/* Form */
+.form {
     display: flex;
     align-items: center;
 
@@ -118,35 +137,98 @@ body {
     height: 88px;
     padding: 8px;
 
+    color: #000;
     background-color: #fff;
     border-radius: 12px;
 }
 
-
-.factoids__factoid {
+.form__input-wrapper {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 
-    width: 254px;
-    height: 72px;
+    padding: 15px 20px 16px 56px; /* 56 - большой паддинг и иконка на фоне */
 
-    padding: 16px 20px 16px 16px;
-    gap: 8px;
+    background-repeat: no-repeat;
+    background-position: 16px 24px; /* 16px (отступ слева внутри wrapper), 24px (отступ сверху внутри wrapper) */
 }
-
-.factoids__factoid--location {
-    width: 300px;
-}
-
-.factoids__factoid__text {
+.form__input {
+    color: #161414;
+    font-weight: 500;
     font-size: 16px;
-    font-weight: 700;
+}
+
+.form__label {
+    font-style: 14px;
+    font-weight: 300;
+    color: #5b5b5b;
+}
+
+.form__input::placeholder {
+    color: #000;
+}
+
+.form__input--location {
+    width: 300px;
+    background-image: url('/img/icons/thematic/location-icon.png');
+}
+
+.form__input--activity {
+    width: 255px;
+    background-image: url('/img/icons/thematic/activity-icon.png');
+}
+
+.form__input--date {
+    width: 255px;
+    background-image: url('/img/icons/thematic/when-icon.png');
+}
+
+.form__input--guests {
+    width: 255px;
+    background-image: url('/img/icons/thematic/guests-icon.png');
+}
+
+
+/* ================================= main ================================= */
+
+main>section {
+    margin-top: 120px;
+}
+
+/* Popular Destinations */
+
+.section__heading {
+    font-size: 32px;
+    font-weight: 600;
+
     color: #161414;
 }
 
-.btn-search {
-    background-color: #7B61FF;
+.section__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 203px);
+    justify-content: space-between;
+    
+    column-gap: 32px;
+}
+
+.section__item {
+    margin-top: 64px;
+    width: 203px;
+}
+
+.section__img {
     border-radius: 12px;
-    width: 60px;
-    height: 60px;
+}
+
+.section__title {
+    margin-top: 8px;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: #161414;
+}
+
+.section__description {
+    font-style: 13px;
+    color: #979797;
 }
