@@ -194,8 +194,6 @@ main>section {
     margin-top: 120px;
 }
 
-/* Popular Destinations */
-
 .section__heading {
     font-size: 32px;
     font-weight: 600;
@@ -205,15 +203,12 @@ main>section {
 
 .section__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 203px);
     justify-content: space-between;
-    
     column-gap: 32px;
 }
 
 .section__item {
     margin-top: 64px;
-    width: 203px;
 }
 
 .section__img {
@@ -231,4 +226,66 @@ main>section {
 .section__description {
     font-style: 13px;
     color: #979797;
+}
+
+/* Popular Destinations */
+
+.section__wrapper--destinations {
+    grid-template-columns: repeat(auto-fit, 203px);
+}
+
+.section__item--destinations {
+    width: 203px;
+    height: 233px;
+}
+
+
+/* Hotels */ 
+.section__wrapper--hotels {
+    grid-template-columns: repeat(auto-fit, 320px);
+}
+
+.section__item--hotels{
+    width: 320px;
+    height: 446px;
+}
+
+.section__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__item--left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+}
+
+.heading__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-btn {
+    width: 105px;
+    height: 44px;
+
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+
+    border-radius: 12px;
+    background-color: #F6F4FF;
+}
+
+.section__button {
+    color: #5243C2;
+    font-size: 16px;
 }
