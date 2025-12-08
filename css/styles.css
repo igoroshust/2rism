@@ -44,6 +44,11 @@ header a {
     justify-content: space-between;
 }
 
+.container--header:nth-child(3) {
+    border: 10px outset green;
+}
+
+
 /* nav */
 .nav {
     display: flex;
@@ -137,6 +142,8 @@ header a {
     width: 1140px;
     height: 88px;
     padding: 8px;
+    /* margin-left: 118px;
+    margin-right: 118px; */
 
     color: #000;
     background-color: #fff;

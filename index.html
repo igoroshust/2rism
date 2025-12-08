@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/libs/autoComplete/dist/css/autoComplete.01.css">
+
+    <script src="/libs/autoComplete/dist/autoComplete.min.js" defer></script>
+    <script src="/js/input-dest.js" defer></script>
     
     <title>2rism</title>
 </head>
 <body>
     
     <header class="header">
-        <div class="container">
+        <div class="container container--header">
             <nav class="nav">
                 <a href="#!" class="logo">
                     <img src="/img/icons/ui/logo-header.svg" alt="2rism logo">
@@ -67,12 +71,12 @@
                 <!-- location -->
                 <div class="form__input-wrapper form__input--location">
                     <label for="location" class="form__label">Location</label>
-                    <input type="text" class="form__input" id="location" placeholder="Explore nearby destinations">
+                    <input autocomplete="off"  type="text" class="form__input" id="location" placeholder="Explore nearby destinations">
                 </div>
                 <!-- activity -->
                 <div class="form__input-wrapper form__input--activity">
                     <label for="activity" class="form__label">Activity</label>
-                    <select name="" id="activity" class="form__select">
+                    <select name="activity" id="activity" class="form__select">
                         <option value="all">All activities</option>
                         <option value="culture">Culture</option>
                         <option value="sport">Sport</option>
@@ -87,69 +91,20 @@
                 <!-- guests -->
                 <div class="form__input-wrapper form__input--guests">
                     <label for="guests" class="form__label">Guests</label>
-                    <select name="" id="guests" class="form__select">
+                    <select name id class="form__select">
                         <option value="">1 guest</option>
-                        <option value="">2 guest</option>
-                        <option value="">3 guest</option>
-                        <option value="">4 guest or more</option>
+                        <option value="">2 guests</option>
+                        <option value="">3 guests</option>
+                        <option value="">More 3 guests</option>
                     </select>
                 </div>
 
                 <button class="button button--search">
                     <img src="/img/icons/thematic/search-btn-icon.png" alt="Search">
                 </button>
-
             </form>
-
         </div>
     </header>
-
-    <main class="main">
-        <!-- Popular Destinations -->
-        <section class="section section--popular">
-            <div class="container">
-                <h3 class="section__heading">Popular Destinations</h3>
-                <div class="section__wrapper">
-                    <!-- 1 item-->
-                        <div class="section__item">
-                            <img src="/img/popular/img.jpg" alt="big sur" class="section__img">
-                            <p class="section__title">Big Sur</p>
-                            <p class="section__description">California, USA</p>
-                        </div>
-                    <!-- 2 item-->
-                        <div class="section__item">
-                            <img src="/img/popular/img-1.jpg" alt="prescott" class="section__img">
-                            <p class="section__title">Prescott</p>
-                            <p class="section__description">Arizona, USA</p>
-                        </div>
-                    <!-- 3 item-->
-                        <div class="section__item">
-                            <img src="/img/popular/img-2.jpg" alt="fort mayers" class="section__img">
-                            <p class="section__title">Fort Mayers</p>
-                            <p class="section__description">Florida, USA</p>
-                        </div>
-                    <!-- 4 item-->
-                        <div class="section__item">
-                            <img src="/img/popular/img-3.jpg" alt="tucson" class="section__img">
-                            <p class="section__title">Tucson</p>
-                            <p class="section__description">Arizona, USA</p>
-                        </div>
-                    <!-- 5 item-->
-                        <div class="section__item">
-                            <img src="/img/popular/img-4.jpg" alt="saint joseph" class="section__img">
-                            <p class="section__title">St. Joseph</p>
-                            <p class="section__description">Michigan, USA</p>
-                        </div>
-                    <!-- 6 item-->
-                        <div class="section__item">
-                            <img src="/img/popular/img-5.jpg" alt="madrid" class="section__img">
-                            <p class="section__title">Madrid</p>
-                            <p class="section__description">Spain</p>
-                        </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
 </body>
 </html>
