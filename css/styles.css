@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 /* @import url(https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600); Пример подключения через плагин google fonts */
-@import './reset.css';
+@import '/css/reset.css';
+@import '/css/buttons.css';
 
 body {
     font-family: 'Poppins', sans-serif;
