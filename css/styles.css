@@ -198,9 +198,10 @@ header a {
 
 /* ================================= main ================================= */
 
+/* ---------------- Popular ------------ */
 .title-1 {
     font-weight: 600;
-    font-style: 32px;
+    font-size: 32px;
     line-height: 1.5;
     color: #161414;
 }
@@ -218,6 +219,8 @@ header a {
 }
 .section__header {
     margin-bottom: 64px;
+
+    /* Для позиционирования кнопки View all с краю */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -267,4 +270,48 @@ header a {
 
 .card__location:hover {
     color: #7B61FF;
+}
+
+
+/* ---------------- Hotels ------------- */
+.section__cards--hotels {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card__img--hotel {
+    margin-bottom: 10px;
+}
+
+.card__title--hotel {
+    margin-bottom: 12px;
+}
+
+.card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__location {
+
+}
+.card__location--icon {
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+    background-image: url('/img/icons/thematic/mappin.png');
+}
+.card__rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+/* ---------------- Hotels ------------- */
+.section__cards--activities {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card__img--activities {
+    margin-bottom: 16px;
 }

@@ -34,6 +34,8 @@
     align-items: center;
     gap: 4px;
 
+    opacity: 1;
+
     padding: 10px;
     height: 44px;
 
@@ -41,4 +43,10 @@
     border-radius: 12px;
 
     color: #5243C2;
+
+    transition: background-color, color 0.2s ease-in;
+}
+
+.button-more:hover {
+    background: #cac7e7;
 }
