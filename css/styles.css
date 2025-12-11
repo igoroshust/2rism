@@ -289,3 +289,58 @@ main>section {
     color: #5243C2;
     font-size: 16px;
 }
+
+
+
+/* Travel Tips */
+
+.section__wrapper--travel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 672px);
+    gap: 32px;
+}
+
+.section__item--travel {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 32px;
+}
+
+.section__container--travel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section__title--travel {
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #5B5B5B;
+}
+
+.section__desciption--travel {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: calc(32 / 16);
+}
+
+
+.section__item--bottom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.one, .two, .three {
+    display: flex;
+    gap: 4px;
+} 
+
+
+.section__item--bottom {
+    font-size: 12px;
+    color: #878787;
+}
