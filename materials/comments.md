@@ -70,8 +70,173 @@ assets/
 
 
 
+**Вёрстка раздела Travel Tips от ИИ**
+```html
+<section class="section section--travel">
+  <div class="container">
+    <div class="heading__wrapper">
+      <h3 class="section__heading">Travel Tips and Advice</h3>
+      <div class="header-btn">
+        <a href="#!" role="button" class="section__button">View all</a>
+        <img src="/img/icons/ui/arrow-right-line.png" alt="Arrow">
+      </div>
+    </div>
 
+    <div class="section__wrapper section__wrapper--travel">
+      <!-- Item 1 -->
+      <article class="section__item">
+        <img src="/img/travel/img.jpg" alt="East Village Ice Cream Crawl" class="section__img">
+        <p class="section__title">East Village Ice Cream Crawl</p>
+        <p class="section__excerpt">
+          We will stop at five different world-class ice cream shops on this 1.5 mile 1.5 hour tour.
+          At each ice cream store we'll explore the story behind the business and see what
+          makes the ice cream unique as you savor every…
+        </p>
+        <div class="section__meta">
+          <div class="section__meta-item">
+            <img src="/img/icons/thematic/calendar-2-line.svg" alt="Date">
+            <span class="section__date">Today</span>
+          </div>
+          <div class="section__meta-item">
+            <img src="/img/icons/thematic/Group.svg" alt="Author">
+            <span class="section__author">Maria Philips</span>
+          </div>
+          <div class="section__meta-item">
+            <img src="/img/icons/thematic/comment.svg" alt="Comments">
+            <span class="section__comments">2</span>
+          </div>
+        </div>
+      </article>
 
+      <!-- Item 2 -->
+      <article class="section__item">
+        <img src="/img/travel/img-1.jpg" alt="Brooklyn Bridge cinematic photo walk" class="section__img">
+        <p class="section__title">Brooklyn Bridge cinematic photo walk</p>
+        <p class="section__excerpt">
+          This experience takes place at the Brooklyn Bridge Park and Brooklyn Bridge,
+          but I’m always open to capture clients at different locations upon request for
+          an additional charge.
+        </p>
+        <div class="section__meta">
+          <div class="section__meta-item">
+            <img src="/img/icons/thematic/calendar-2-line.svg" alt="Date">
+            <span class="section__date">Today</span>
+          </div>
+          <div class="section__meta-item">
+            <img src="/img/icons/thematic/Group.svg" alt="Author">
+            <span class="section__author">James Calzoni</span>
+          </div>
+          <div class="section__meta-item">
+            <img src="/img/icons/thematic/comment.svg" alt="Comments">
+            <span class="section__comments">17</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+```
+
+```css
+/* Travel Tips */
+.section--travel {
+  --travel-gap: 32px;
+  --meta-gap: 24px;
+}
+
+.section__wrapper--travel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--travel-gap);
+  margin-top: var(--travel-gap);
+}
+
+.section__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.section__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.section__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #5B5B5B;
+  margin: 0 16px;
+  line-height: 1.4;
+}
+
+.section__excerpt {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4A4A4A;
+  margin: 0 16px 16px;
+}
+
+.section__meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--meta-gap);
+  padding: 0 16px 16px;
+}
+
+.section__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.section__date,
+.section__author,
+.section__comments {
+  font-size: 12px;
+  color: #878787;
+  white-space: nowrap;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .section__wrapper--travel {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .section__meta {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .section__meta-item {
+    min-width: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__title {
+    font-size: 18px;
+  }
+  
+  .section__excerpt {
+    font-size: 14px;
+  }
+  
+  .section__meta {
+    padding: 0 12px 12px;
+  }
+}
+
+```
 
 
 
