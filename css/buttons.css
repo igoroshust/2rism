@@ -50,3 +50,9 @@
 .button-more:hover {
     background: #cac7e7;
 }
+
+.button--subscribe {
+    width: 72px;
+    height: 72px;
+    padding: 28px;
+}

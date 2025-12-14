@@ -7,6 +7,10 @@
 - transition
 - will-change
 
+- .subscribe__input:focus ~ .subscribe__label {
+    top: 16px; 
+}
+Как работает эта запись?
 
 
 1. `ctrl + shift` - выделяет несколько родственных изобржений (например, иконок). Выбираем изображение, нажимаем `ctrl + shift`, выделяем соседние элементы и эксортируем группу
@@ -85,9 +89,10 @@ assets/
 **discover**
 ![alt text](discover-blocks.png)
 
-**Popular**
-- Стоит ли использовать article?
-
+**footer**
+![alt text](image-5.png)
+![alt text](image-4.png)
+![alt text](image-6.png)
 
 
 ### CSS-свойства

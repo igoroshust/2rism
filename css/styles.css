@@ -5,6 +5,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    color: #161414;
 }
 
 .none {
@@ -248,8 +249,21 @@ header a {
 }
 /* Конец приёма */
 
+
+.card--wide {
+    /* Карточка в разделе 'Travel' */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
 .card__img {
     border-radius: 12px;
+}
+
+.card__img--no-margin {
+    /* Карточка в разделе 'Travel' */
+    margin: 0;
 }
 
 .card__title {
@@ -314,4 +328,216 @@ header a {
 
 .card__img--activities {
     margin-bottom: 16px;
+}
+
+
+
+
+
+
+
+/* ---------------- Travel Tips ------------- */
+.section__cards--travel {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card__title--big {
+    color: #161414;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.card__text {
+    color: #5b5b5b;
+    line-height: 2;
+}
+
+
+.card__footer--wide {
+    /* Прижимаем футер к низу страницы */
+    margin-top: auto;
+}
+.card__footer-link {
+    /* Чтобы выплывали поверх ссылки (card__link) */
+    position: relative; 
+    z-index: 1;
+    /* Конец */
+
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: 0px 1px;
+
+    font-size: 12px;
+    color: #878787;
+}
+
+.card__footer-link:hover {
+    color: #7B61FF;
+}
+
+
+.card__footer-link--date {
+    background-image: url('./../img/icons/thematic/calendar-2-line.svg');
+}
+.card__footer-link--author {
+    background-image: url('./../img/icons/thematic/Group.svg');
+
+}
+.card__footer-link--comments {
+    background-image: url('./../img/icons/thematic/comment.svg');
+}
+
+
+/* About Us */
+.about-us {
+    max-width: 1144px;
+    margin: 0 auto; /* Расположение блока по центру контейнера */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.about-us__desc {
+    display: grid;
+    align-content: center;
+    gap: 32px;
+}
+.about-us__title {
+    font-size: 32px;
+    font-weight: 600;
+}
+.about-us__text {
+    font-size: 16px;
+    color: #5b5b5b;
+    line-height: 2;
+}
+
+.about-us__btn {
+    /* Размещаем кнопку с левого края */
+    justify-self: flex-start;
+}
+
+.about-us__img {
+    border-radius: 24px;
+}
+
+
+/* Footer */
+.footer {
+    padding: 120px 0;
+    background-color: #f9f9f9;
+}
+
+.footer__row {
+    display: grid;
+    gap: 64px;
+    grid-template-columns: repeat(3, auto);
+}
+
+.footer__copyright {
+    max-width: 354pxs;
+    display: grid;
+    gap: 16px;
+}
+
+.footer__text {
+    margin-bottom: 16px; /* Отступ был 32, указали 16, так как учитывается gap */
+    font-size: 13px;
+    color: #5b5b5b;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.footer__nav-wrapper {
+    display: flex;
+    gap: 64px;
+}
+
+.footer__nav {
+    display: grid;
+    gap: 20px;
+}
+.footer__nav-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+.footer__nav-list {
+    display: grid;
+    gap: 12px;
+}
+.footer__nav-item {
+    color: #5b5b5b;
+    font-size: 13px;
+}
+.footer__nav-link {
+    color: #5b5b5b;
+    font-size: 13px;
+}
+
+.footer__nav-link:hover {
+    color: #7B61FF;
+}
+
+
+
+.footer__subscribe {
+    max-width: 388px;
+}
+
+.footer__subscribe-title {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.subscribe {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.subscribe__input-wrapper {
+    position: relative;
+}
+
+.subscribe__btn-wrapper {
+}
+
+.subscribe__input {
+    padding: 32px 20px 16px 56px;
+
+    width: 300px;
+    height: 72px;
+    background-color: #fff;
+    border-radius: 12px;
+
+    background-image: url('/img/icons/social/email-icon.png');
+    background-repeat: no-repeat;
+    background-position: 18px 27px;
+}
+
+
+.subscribe__input:focus ~ .subscribe__label {
+    top: 16px;
+}
+
+.subscribe__label {
+    position: absolute;
+    top: 26;
+    left: 56px;
+
+    font-size: 14px;
+    font-weight: 300;
+    color: #5b5b5b;
 }
