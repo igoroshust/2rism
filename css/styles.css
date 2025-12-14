@@ -515,7 +515,7 @@ header a {
 }
 
 .subscribe__input {
-    padding: 32px 20px 16px 56px;
+    padding: 32px 20px 20px 56px;
 
     width: 300px;
     height: 72px;
@@ -528,16 +528,33 @@ header a {
 }
 
 
-.subscribe__input:focus ~ .subscribe__label {
+/* Когда input в фокусе, мы ищем label и поднимаем его наверх */
+.subscribe__input:focus ~ .subscribe__label, 
+/* Когда валидное значение */
+.subscribe__input:valid ~ .subscribe__label {
     top: 16px;
 }
 
+/* Когда НЕвалидное значение (при input type="email") */
+.subscribe__input:invalid ~ .subscribe__label {
+    top: 16px;
+    color: #ff0000;
+}
+
+
 .subscribe__label {
     position: absolute;
-    top: 26;
+    top: 26px;
     left: 56px;
 
     font-size: 14px;
     font-weight: 300;
     color: #5b5b5b;
+
+    transition: all 0.2s ease-in;
+    pointer-events: none; /* Элемент не реагирует на события указателя */
+}
+
+.subscribe__label--top {
+    top: 16px;
 }
