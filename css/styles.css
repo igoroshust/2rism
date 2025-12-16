@@ -2,6 +2,8 @@
 /* @import url(https://fonts.googleapis.com/css?family=Poppins:300,regular,500,600); Пример подключения через плагин google fonts */
 @import '/css/reset.css';
 @import '/css/buttons.css';
+@import '/css/nav-icon.css';
+@import '/css/mobile-nav.css';
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -71,9 +73,6 @@ header a {
     font-weight: 300;
 }
 
-.nav-list__item {
-    
-}
 .nav-list__link {
     opacity: 0.7;
 }
@@ -139,6 +138,7 @@ header a {
 .form {
     display: flex;
     align-items: center;
+    align-self: center; /* Выравнивание формы по центру (на больших экранах) */
 
     width: 1140px;
     height: 88px;
@@ -212,12 +212,7 @@ header a {
     padding: 120px 0;
     gap: 120px;
 }
-.section {
 
-}
-.container {
-
-}
 .section__header {
     margin-bottom: 64px;
 
@@ -258,12 +253,22 @@ header a {
 }
 
 .card__img {
+    width: 100%;
+    margin-bottom: 8px;
     border-radius: 12px;
+    object-fit: cover; /* Пропорциональное масштабирование картинки */
 }
 
 .card__img--no-margin {
     /* Карточка в разделе 'Travel' */
     margin: 0;
+}
+
+.card__img--h100 {
+    /* Изображение по высоте блока без потери пропорций */
+    height: 100%;
+    object-fit: cover;
+    /* Конец */
 }
 
 .card__title {
@@ -304,11 +309,10 @@ header a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    column-gap: 24px;
 }
 
-.card__location {
-
-}
 .card__location--icon {
     padding-left: 20px;
     background-repeat: no-repeat;
@@ -333,9 +337,6 @@ header a {
 
 
 
-
-
-
 /* ---------------- Travel Tips ------------- */
 .section__cards--travel {
     grid-template-columns: repeat(2, 1fr);
@@ -344,7 +345,8 @@ header a {
 .card__desc {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    align-items: flex-start;
+    row-gap: 16px;
 }
 
 .card__title--big {
@@ -358,11 +360,11 @@ header a {
     line-height: 2;
 }
 
-
 .card__footer--wide {
     /* Прижимаем футер к низу страницы */
     margin-top: auto;
 }
+
 .card__footer-link {
     /* Чтобы выплывали поверх ссылки (card__link) */
     position: relative; 
@@ -380,7 +382,6 @@ header a {
 .card__footer-link:hover {
     color: #7B61FF;
 }
-
 
 .card__footer-link--date {
     background-image: url('./../img/icons/thematic/calendar-2-line.svg');
@@ -426,6 +427,8 @@ header a {
 
 .about-us__img {
     border-radius: 24px;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -465,7 +468,8 @@ header a {
 }
 
 .footer__nav {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 .footer__nav-title {
@@ -489,8 +493,6 @@ header a {
     color: #7B61FF;
 }
 
-
-
 .footer__subscribe {
     max-width: 388px;
 }
@@ -504,14 +506,12 @@ header a {
 
 .subscribe {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 72px;
+    gap: 16px;
 }
 
 .subscribe__input-wrapper {
     position: relative;
-}
-
-.subscribe__btn-wrapper {
 }
 
 .subscribe__input {

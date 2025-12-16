@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/media.css">
     <link rel="stylesheet" href="/libs/autoComplete/dist/css/autoComplete.01.css">
     <link rel="stylesheet" href="/libs/custom-select/custom-select.css">
     <!-- <link rel="stylesheet" href="/libs/easepick/easpick.min.css"> -->
@@ -13,13 +14,14 @@
     <script src="/libs/easepick/easepick.min.js" defer></script>
     
     <script src="/js/input-dest.js" defer></script>
+    <script src="/js/mobile-nav.js" defer></script>
     <script src="/js/main.js" defer></script>
 
     <title>2rism</title>
 </head>
 <body>
     
-    <header class="header none">
+    <header class="header">
         <div class="container container--header">
             <nav class="nav">
                 <a href="#!" class="logo">
@@ -50,16 +52,23 @@
                     </li>
                 </ul>
 
-                <div class="user">
-                    <div class="user__content">
-                        <span class="user__greeting">Holla, </span>
-                        <span class="user__name">Ales Nestreil</span>
-                    </div>
 
-                    <div class="user__avatar">
-                        <img class="user__img" src="/img/discover/user-pic.jpg" alt="Avatar">
+                <div class="nav__user">
+                    <div class="user">
+                        <div class="user__content">
+                            <span class="user__greeting">Holla, </span>
+                            <span class="user__name">Ales Nestreil</span>
+                        </div>
+    
+                        <div class="user__avatar">
+                            <img class="user__img" src="/img/discover/user-pic.jpg" alt="Avatar">
+                        </div>
                     </div>
                 </div>
+
+                <button class="mobile-nav-btn">
+                    <div class="nav-icon"></div>
+                </button>
 
             </nav>
 
@@ -112,9 +121,23 @@
         </div>
     </header>
 
+    <div class="mobile-nav-fade none">
+        <div class="mobile-nav">
+            <ul class="mobile-nav__list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">hotles</a></li>
+                <li><a href="#">restaurants</a></li>
+                <li><a href="#">tours</a></li>
+                <li><a href="#">destinations</a></li>
+                <li><a href="#">activities</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+    </div>
+
     <main class="main">
         <!-- Popular -->
-        <section class="section none">
+        <section class="section">
             <div class="container">
                 <header class="section__header">
                     <h2 class="title-1">Popular Destinations</h2>
@@ -174,7 +197,7 @@
         </section>
 
         <!-- Hotels -->
-        <section class="section none">
+        <section class="section">
             <div class="container">
                 <header class="section__header">
                     <h2 class="title-1">Hotels and Restaurants</h2>
@@ -264,7 +287,7 @@
         </section>
 
         <!-- Travel Tips -->
-        <section class="section none">
+        <section class="section">
             <div class="container">
                 <header class="section__header">
                     <h2 class="title-1">Travel Tips and Advice</h2>
@@ -279,7 +302,7 @@
                     <article class="card card--wide">
                         <!-- Делаем все элементы карточки ссылкой -->
                         <a class="card__link" href="#!"></a>
-                        <img class="card__img card__img--no-margin" src="/img/travel/img.jpg" alt="Img">
+                        <img class="card__img card__img--no-margin card__img--h100" src="/img/travel/img.jpg" alt="Img">
 
                         <div class="card__desc">
                             <h3 class="card__title card__title--big">East Village Ice Cream Crawl</h3>
@@ -296,7 +319,7 @@
                     <article class="card card--wide">
                         <!-- Делаем все элементы карточки ссылкой -->
                         <a class="card__link" href="#!"></a>
-                        <img class="card__img card__img--no-margin" src="/img/travel/img-1.jpg" alt="Img">
+                        <img class="card__img card__img--no-margin card__img--h100" src="/img/travel/img-1.jpg" alt="Img">
 
                         <div class="card__desc">
                             <h3 class="card__title card__title--big">Brooklyn Bridge cinematic photo walk</h3>
@@ -315,7 +338,7 @@
         </section>
 
         <!-- Activities -->
-        <section class="section none">
+        <section class="section">
             <div class="container">
                 <header class="section__header">
                     <h2 class="title-1">Activities</h2>
@@ -360,7 +383,7 @@
         </section>
 
         <!-- About us -->
-        <section class="section none">
+        <section class="section">
             <div class="container">
                 <div class="about-us">
                     <div class="about-us__desc">
